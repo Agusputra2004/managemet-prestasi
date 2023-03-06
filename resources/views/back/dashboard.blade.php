@@ -5,7 +5,7 @@
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 			<div>
 				<h2 class="text-white pb-2 fw-bold">Halaman Admin</h2>
-				<h5 class="text-white op-7 mb-2">Suka suka suka</h5>
+				<h5 class="text-white op-7 mb-2">Tetap semangat , meski di hantam banyak masalah berat</h5>
 			</div>
 			<div class="ml-md-auto py-2 py-md-0">
 				{{-- <a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
@@ -15,8 +15,8 @@
 	</div>
 </div>
 <div class="page-inner mt--5">
-	<div class="row">
-		<div class="col-sm-6 col-md-3">
+	<div class="row justify-content-center">
+		<!-- <div class="col-sm-6 col-md-3">
 			<div class="card card-stats card-round">
 				<div class="card-body ">
 					<div class="row align-items-center">
@@ -34,7 +34,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="col-sm-6 col-md-3">
 			<div class="card card-stats card-round">
 				<div class="card-body">

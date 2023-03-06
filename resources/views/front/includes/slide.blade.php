@@ -3,7 +3,7 @@
         <div class="carousel-inner">
           @foreach ($slide as $key => $row)
           <div class="carousel-item {{ $key == 0 ? 'active' : ''}}">
-            <img src="{{ asset('uploads/' . $row->gambar_slide) }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('uploads/' . $row->gambar_slide) }}" class="d-block w-100" alt="..." width="1200x" height="600px">
           </div>
           @endforeach
         </div>
