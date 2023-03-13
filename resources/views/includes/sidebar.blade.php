@@ -3,13 +3,15 @@
         <div class="sidebar-content">
             <div class="user">
                 <div class="avatar-sm float-left mr-2">
-                    <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+                    <img src="../uploads/pp.jpeg" alt="..." class="avatar-img rounded-circle">
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                         <span>
-                            Hizrian
-                            <span class="user-level">Administrator</span>
+                        {{ Auth::user()->name }}
+                        <br>
+                        {{ Auth::user()->email }}
+                            {{-- <span class="user-level">Administrator</span> --}}
                             <span class="caret"></span>
                         </span>
                     </a>
@@ -65,28 +67,28 @@
                 </li> -->
                 <li class="nav-item">
                     <a href="{{ route('kategori.index') }}">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-tags"></i>
                         <p>Kategori</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('artikel.index') }}">
-                        <i class="fas fa-desktop"></i>
-                        <p>Artikel</p>
+                        <i class="fa-solid fa-medal"></i>
+                        <p>Prestasi</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('playlist.index') }}">
-                        <i class="fas fa-video"></i>
-                        <p>Playlist video</p>
+                        <i class="fa-solid fa-certificate"></i>
+                        <p>Sertifikat</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('materi.index') }}">
-                        <i class="fas fa-film"></i>
-                        <p>Materi Video</p>
+                        <i class="fa-solid fa-book"></i>
+                        <p>Dokumentasi</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -95,12 +97,12 @@
                         <p>Slide Banner</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('iklan.index') }}">
                         <i class="fas fa-play"></i>
                         <p>Iklan</p>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="nav-item">
                     <a href="{{ route('logout') }}"

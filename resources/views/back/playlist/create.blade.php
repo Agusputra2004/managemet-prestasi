@@ -19,7 +19,7 @@
      <div class="card full-height">
         <div class="card-header">
            <div class="card-head-row">
-              <div class="card-title">Form playlist</div>
+              <div class="card-title">Form Sertifikat</div>
               <a href="{{ route('playlist.index') }}" class="btn btn-warning btn-sm ml-auto"><i class="fa-solid fa-rotate-left"></i>Back</a>
           </div>
       </div>
@@ -27,7 +27,7 @@
         <form method="post" action="{{ route('playlist.store') }}" enctype="multipart/form-data"> 
             @csrf
             <div class="form-group">
-                <label for="Nama">Playlist video</label>
+                <label for="Nama">Nama Prestasi</label>
                 <input type="text" name="judul_playlist" class="form-control" placeholder="Enter Nama Prestasi">
             </div>
 
@@ -38,7 +38,7 @@
 
 
            <div class="form-group">
-            <label for="Dokumentasi">Gambar playlist</label>
+            <label for="Dokumentasi">File Sertifikat</label>
             <input type="file" name="gambar_playlist" class="form-control">
         </div>
 

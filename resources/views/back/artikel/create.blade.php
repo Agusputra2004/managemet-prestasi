@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="kategori">kategori</label>
+                            <label for="kategori">Kategori</label>
                             <select name="kategori_id" class="form-control">
                             	@foreach ($kategori as $row)
                             <option value="{{ $row -> id }}">{{$row -> nama_kategori}}</option>
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="Dokumentasi">Dokumentesi</label>
+                            <label for="Dokumentasi">Dokumentasi</label>
                             <input type="file" name="gambar_artikel" class="form-control">
                         </div>
 

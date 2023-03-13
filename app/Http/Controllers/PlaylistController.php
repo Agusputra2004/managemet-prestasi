@@ -7,6 +7,7 @@ use App\Models\Playlist;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class PlaylistController extends Controller
@@ -50,9 +51,10 @@ class PlaylistController extends Controller
         $data['views'] = 0;
         $data['gambar_playlist'] = $request->file('gambar_playlist')->store('playlist');
 
+        Alert::success('Berhasil', 'Sertifikat berhasil ditambahkan');
         Playlist::create($data);
 
-        return redirect()->route('playlist.index')->with('success', 'Kategori berhasil ditambahkan');
+        return redirect()->route('playlist.index');
     }
 
     /**
@@ -98,8 +100,9 @@ class PlaylistController extends Controller
                 'slug' => str::slug($request->judul_playlist),
                 'is_active' => $request->is_active, 
                 'user_id' => Auth::id(),
-            ]);    
-            return redirect()->route('playlist.index')->with('success', 'playlist berhasil di update');
+            ]);
+            Alert::info('Berhasil', 'Sertifikat berhasil diupdate');    
+            return redirect()->route('playlist.index');
 
         }else{
             $artikel = Playlist::find($id);
@@ -116,7 +119,8 @@ class PlaylistController extends Controller
 
             ]);
 
-            return redirect()->route('playlist.index')->with('success', 'playlist berhasil di update');
+            Alert::info('Berhasil', 'Sertifikat berhasil diupdate');
+            return redirect()->route('playlist.index');
         }
     }
 
@@ -134,6 +138,7 @@ class PlaylistController extends Controller
 
        $playlist->delete();
 
-       return redirect()->route('playlist.index')->with('success', 'playlist berhasil dihapus');
+       alert()->error('Delete','Sertifikat berhasil dihapus');
+       return redirect()->route('playlist.index');
    }
 }

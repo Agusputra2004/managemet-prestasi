@@ -19,8 +19,8 @@
      <div class="card full-height">
         <div class="card-header">
            <div class="card-head-row">
-              <div class="card-title">Data Playlist</div>
-              <a href="{{ route('playlist.create') }}" class="btn btn-primary btn-sm ml-auto" > <i class="fa-solid fa-plus"></i>Tambah Prestasi</a>
+              <div class="card-title">Data Sertifikat</div>
+              <a href="{{ route('playlist.create') }}" class="btn btn-primary btn-sm ml-auto" > <i class="fa-solid fa-plus"></i>Tambah Sertifikat</a>
           </div>
       </div>
       <div class="card-body">
@@ -34,11 +34,11 @@
                 <thead>
                     <tr>
                         <th>id</th>
-                        <th>Playlist video</th>
-                        <th>Slug</th>
+                        <th>Nama Sertifikat</th>
+                        {{-- <th>Slug</th> --}}
                         <th>author</th>
                         <th>Status</th>
-                        <th>Gambar</th>
+                        <th>FIle Sertifikat</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -47,7 +47,7 @@
                     <tr>
                         <td>{{ $row -> id }}</td>
                         <td>{{ $row -> judul_playlist }}</td>
-                        <td>{{ $row -> slug }}</td>
+                        {{-- <td>{{ $row -> slug }}</td> --}}
                         <td>{{ $row -> users -> name }}</td>
                         <td>
                             @if ($row ->is_active == '1')

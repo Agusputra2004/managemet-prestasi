@@ -28,7 +28,7 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="Nama">Playlist video</label>
+                <label for="Nama">Nama Sertifikat</label>
                 <input type="text" name="judul_playlist" class="form-control" value="{{ $playlist ->judul_playlist }}" placeholder="Enter Nama Prestasi">
             </div>
 
@@ -50,10 +50,10 @@
             </div>
 
             <div class="form-group">
-                <label for="Dokumentasi">Gambar playlist</label>
+                <label for="Dokumentasi">File Sertifikat</label>
                 <input type="file" name="gambar_playlist" class="form-control">
                 <br>
-                <label for="Dokumentasi">gambar saat ini</label><br>
+                <label for="Dokumentasi">Sertifikat saat ini</label><br>
                 <img src="{{asset('uploads/' . $playlist->gambar_playlist)}}" width="100">
             </div>
 

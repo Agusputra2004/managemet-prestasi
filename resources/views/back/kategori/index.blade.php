@@ -35,7 +35,7 @@
                                 <tr>
                                     <th>id</th>
                                     <th>Nama Kategori</th>
-                                    <th>Slug</th>
+                                    <th>Deskripsi</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

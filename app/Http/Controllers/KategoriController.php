@@ -106,7 +106,8 @@ class KategoriController extends Controller
         $kategori = Kategori::find($id);
 
         $kategori->delete();
-
-        return redirect()->route('kategori.index')->with('success', 'Kategori berhasil dihapus');
+        
+        alert()->error('Delete','Kategori berhasil dihapus');
+        return redirect()->route('kategori.index');
     }
 }

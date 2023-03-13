@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Materi;
+use App\Models\Playlist;
 
 class DashboardController extends Controller
 {
@@ -20,8 +21,18 @@ class DashboardController extends Controller
         $count = Artikel::count();
         $countk = Kategori::count();
         $countm = Materi::count();
+        $countx = Playlist::count();
 
-        return view('back.dashboard',compact('count','countk','countm'));
+        //chart js
+        $prestasis = Artikel::select('id', \DB::raw('count(*) as jumlah'))
+        ->groupBy('id')
+        ->get();
+
+        return view('back.dashboard',compact('count','countk','countm', 'countx','prestasis'));
+
+        
+
+    // return view('back.dashboard', compact('prestasis'));
         
     }
 

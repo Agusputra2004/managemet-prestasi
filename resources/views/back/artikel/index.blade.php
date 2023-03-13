@@ -35,9 +35,10 @@
                                 <tr>
                                     <th>id</th>
                                     <th>Nama Prestasi</th>
-                                    <th>Slug</th>
-                                    <th>kategori</th>
+                                    <th>Deskripsi Prestasi</th>
+                                    <th>Kategori</th>
                                     <th>author</th>
+                                    <th>Dokumentasi</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

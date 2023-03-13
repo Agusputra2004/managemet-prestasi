@@ -19,7 +19,7 @@
 			<div class="card full-height">
 				<div class="card-header">
 					<div class="card-head-row">
-						<div class="card-title">Form Materi Prestasi</div>
+						<div class="card-title">Form Dokumentasi</div>
                         <a href="{{ route('materi.index') }}" class="btn btn-warning btn-sm ml-auto"><i class="fa-solid fa-rotate-left"></i>Back</a>
 					</div>
 				</div>
@@ -27,12 +27,12 @@
                     <form method="post" action="{{ route('materi.store') }}" enctype="multipart/form-data"> 
                         @csrf
                         <div class="form-group">
-                            <label for="Nama">Materi Video </label>
+                            <label for="Nama">Nama Dokumentasi </label>
                             <input type="text" name="judul_materi" class="form-control" placeholder="Enter judul">
                         </div>
 
                         <div class="form-group">
-                            <label for="Nama">Link Video </label>
+                            <label for="Nama">Link optional </label>
                             <input type="text" name="link" class="form-control" placeholder="Enter link">
                         </div>
 
@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="kategori">Playlist </label>
+                            <label for="kategori">Sertifikat </label>
                             <select name="playlist_id" class="form-control">
                             	@foreach ($playlist as $row)
                             <option value="{{ $row -> id }}">{{$row -> judul_playlist}}</option>

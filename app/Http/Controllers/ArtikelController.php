@@ -8,6 +8,7 @@ use App\Models\Kategori;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 
@@ -55,9 +56,11 @@ class ArtikelController extends Controller
         $data['views'] = 0;
         $data['gambar_artikel'] = $request->file('gambar_artikel')->store('artikel');
 
+        Alert::success('Berhasil', 'Prestasi berhasil ditambahkan');
         Artikel::create($data);
 
-        return redirect()->route('artikel.index')->with('success', 'Kategori berhasil ditambahkan');
+    
+        return redirect()->route('artikel.index');
     }
 
     /**
@@ -112,8 +115,9 @@ class ArtikelController extends Controller
                 'kategori_id' => $request->kategori_id, 
                 'is_active' => $request->is_active, 
                 'user_id' => Auth::id(),
-            ]);    
-        return redirect()->route('artikel.index')->with('success', 'Kategori berhasil di update');
+            ]); 
+            Alert::info('Update', 'Prestasi berhasil diupdate');   
+        return redirect()->route('artikel.index');
         
         }else{
             $artikel = Artikel::find($id);
@@ -131,7 +135,8 @@ class ArtikelController extends Controller
 
             ]);
 
-        return redirect()->route('artikel.index')->with('success', 'Kategori berhasil di update');
+        Alert::info('Update', 'Prestasi berhasil diupdate'); 
+        return redirect()->route('artikel.index');
         }
 
         
@@ -152,6 +157,7 @@ class ArtikelController extends Controller
 
         $artikel->delete();
 
-        return redirect()->route('artikel.index')->with('success', 'prestasi berhasil dihapus');
+        alert()->error('Delete','Kategori berhasil dihapus');
+        return redirect()->route('artikel.index');
     }
 }

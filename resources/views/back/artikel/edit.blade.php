@@ -35,7 +35,7 @@
 
             <div class="form-group">
                 <label for="Detail">Detail Prestasi</label>
-                <textarea name="body" class="form-control">{{$artikel -> body}}</textarea>
+                <textarea name="body" class="form-control" id="editor1">{{$artikel -> body}}</textarea>
             </div>
 
             <div class="form-group">

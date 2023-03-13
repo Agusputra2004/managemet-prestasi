@@ -7,6 +7,8 @@ use App\Models\Playlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage; 
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class MateriController extends Controller
 {
@@ -50,7 +52,8 @@ class MateriController extends Controller
 
         Materi::create($data);
 
-        return redirect()->route('materi.index')->with('success', 'Data berhasil ditambahkan');
+        Alert::success('Berhasil', 'Dokumentasi berhasil ditambahkan');
+        return redirect()->route('materi.index');
     }
 
     /**
@@ -101,7 +104,9 @@ class MateriController extends Controller
         Storage::delete($materi->gambar_prestasi);
 
         $materi->update($data);
-        return redirect()->route('materi.index')->with('success','  Berhasil Upload Materi ');
+        
+        Alert::info('Berhasil', 'Sertifikat berhasil diupdate');
+        return redirect()->route('materi.index');
 
         } else {
 
@@ -110,7 +115,8 @@ class MateriController extends Controller
 
         $materi = Materi::findOrFail($id);
         $materi->update($data);
-        return redirect()->route('materi.index')->with('success','  Berhasil Upload Materi ');
+        alert()->info('Update','Dokumentasi berhasil dihapus');
+        return redirect()->route('materi.index');
 
         }
 
@@ -129,6 +135,7 @@ class MateriController extends Controller
         Storage::delete($materi->gambar_prestasi);
         $materi->delete();
  
-        return redirect()->route('materi.index')->with('success', 'materi berhasil dihapus');
+        alert()->error('Delete','Dokumentasi berhasil dihapus');
+        return redirect()->route('materi.index');
     }
 }

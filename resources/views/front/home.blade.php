@@ -1,22 +1,37 @@
 @extends('front.layouts.frontend')
-@include('front.includes.slide')
-
 
 @section('content')
-
     
 <div class="row">
     @forelse ($artikel as $row)
-    <div class="col-md-4 mt-3">
+    <div class="col-md-4 mt-3 mb-3">
        <div class="card">
-           <img src="{{ asset('uploads/' . $row->gambar_artikel) }}" class="card-img-top" alt="...">
-           <div class="card-body">
+           <img class="center-cropped" src="{{ asset('uploads/' . $row->gambar_artikel) }}" class="card-img-top" alt="...">
+           <div class="card-body ">
              <h5 class="card-title">
-              <a href="{{ route('detail-artikel', $row->slug) }}" style="text-decoration: none;">
-              {{ $row->judul }}
-              </a>
-            </h5>
-             <p class="card-text">{!! $row->body !!}</p>
+               <a href="{{ route('detail-artikel', $row->slug) }}" style="text-decoration: none;">
+               {{ $row->judul }}
+               </a>
+              </h5>
+              <style type="text/css">
+              .center-cropped {
+                object-fit: cover;
+                object-position: center;
+                width: 348px;
+                height: 250px;
+                background-position: center center;
+                background-repeat: no-repeat;
+              }
+              p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 300px;
+              }
+              </style>
+             <p class="card-text">
+              {!! $row->body !!}
+              </p>
            </div>
            <!-- <ul class="list-group list-group-flush">
              <li class="list-group-item">Cras justo odio</li>
@@ -35,4 +50,3 @@
 </div>
 
 @endsection
-
