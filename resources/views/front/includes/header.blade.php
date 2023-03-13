@@ -1,4 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg2 mb-3">
+  <style type="text/css">
+      .bg-color {
+          background-image: linear-gradient(	#228B22, #32CD32);
+      }
+      .bg-btn {
+          background-color: #228B22;
+      }
+      .bg2 {
+          background-color: #32CD32;
+      }
+      .bg3 {
+          background-color: #FFFFFF;
+      }
+  </style>  
     <div class="container">  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

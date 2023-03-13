@@ -2,7 +2,21 @@
 @section('content')
 
 <div class="panel-header bg-primary-gradient">
-	<div class="page-inner py-5">
+<style type="text/css">
+    .bg-color {
+        background-image: linear-gradient(	#228B22, #32CD32);
+    }
+    .bg-btn {
+        background-color: #228B22;
+    }
+    .bg2 {
+        background-color: #32CD32;
+    }
+    .bg3 {
+        background-color: #FFFFFF;
+    }
+</style>  
+	<div class="page-inner py-5 bg-color">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 			<div class="ml-md-auto py-2 py-md-0">
 				{{-- <a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
@@ -19,8 +33,8 @@
      <div class="card full-height">
         <div class="card-header">
            <div class="card-head-row">
-              <div class="card-title">Data Materi</div>
-              <a href="{{ route('slide.create') }}" class="btn btn-primary btn-sm ml-auto" > <i class="fa-solid fa-plus"></i>Tambah Slide</a>
+              <div class="card-title">Data Banner</div>
+              <a href="{{ route('slide.create') }}" class="btn btn-success btn-sm ml-auto" style="text-decoration:none; color:white;"> <i class="fa-solid fa-plus mr-1"></i>Tambah Slide</a>
           </div>
       </div>
       <div class="card-body">
@@ -34,7 +48,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Judul Slide</th>
+                        <th>Judul</th>
                         <th>Link</th>
                         <th>Status</th>
                         <th>Gambar</th>

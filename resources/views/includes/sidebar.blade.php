@@ -1,14 +1,15 @@
+
 <div class="sidebar sidebar-style-2">			
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
         <div class="sidebar-content">
             <div class="user">
                 <div class="avatar-sm float-left mr-2">
-                    <img src="../uploads/pp.jpg" alt="..." class="avatar-img rounded-circle">
+                    <img src="{{ asset('uploads/'. Auth::user()->foto) }}" alt="..." class="avatar-img rounded-circle">
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                         <span>
-                        {{ Auth::user()->name }}
+                        {{ Auth::user()->username }}
                             <span class="email" style="font-size:12px">{{ Auth::user()->email }}</span>
                             <!-- <span class="user-level">Administrator</span> -->
                             <span class="caret"></span>
@@ -19,13 +20,13 @@
                     <div class="collapse in" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#profile">
-                                    <span class="link-collapse">My Profile</span>
+                                <a href="/profil">
+                                    <span class="link-collapse">Profil Saya</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#edit">
-                                    <span class="link-collapse">Edit Profile</span>
+                                <a href="/profil/edit">
+                                    <span class="link-collapse">Edit Profil</span>
                                 </a>
                             </li>
                             <!-- <li>
@@ -37,9 +38,9 @@
                     </div>
                 </div>
             </div>
-            <ul class="nav nav-primary">
+            <ul class="nav nav-success">
                 <li class="nav-item active">
-                    <a data-toggle="collapse" href="{{ route('dashboard') }}" class="collapsed" aria-expanded="false">
+                    <a data-toggle="collapse" href="{{ route('dashboard') }}" class="collapsed bg-icon nav-green" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
@@ -66,42 +67,42 @@
                 </li> -->
                 <li class="nav-item">
                     <a href="{{ route('kategori.index') }}">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-list"></i>
                         <p>Kategori</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('artikel.index') }}">
-                        <i class="fas fa-desktop"></i>
-                        <p>Artikel</p>
+                        <i class="fas fa-medal"></i>
+                        <p>Prestasi</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a href="{{ route('playlist.index') }}">
-                        <i class="fas fa-video"></i>
-                        <p>Playlist video</p>
+                        <i class="fas fa-file"></i>
+                        <p>Bukti</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('materi.index') }}">
                         <i class="fas fa-film"></i>
-                        <p>Materi Video</p>
+                        <p>Dokumentasi</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('slide.index') }}">
                         <i class="fas fa-play"></i>
-                        <p>Slide Banner</p>
+                        <p>Banner</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{ route('iklan.index') }}">
                         <i class="fas fa-play"></i>
                         <p>Iklan</p>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                     <a href="{{ route('logout') }}"

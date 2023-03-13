@@ -101,7 +101,7 @@ class PlaylistController extends Controller
             ]);    
             return redirect()->route('playlist.index')->with('success', 'playlist berhasil di update');
 
-        }else{
+        } else {
             $artikel = Playlist::find($id);
 
             Storage::delete($artikel->gambar_playlist);

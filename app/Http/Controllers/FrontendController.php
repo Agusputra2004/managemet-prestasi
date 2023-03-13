@@ -35,12 +35,10 @@ class FrontendController extends Controller
 
         return view('front.artikel.detail-artikel', [
             'artikel' => $artikel,
-            'KatS' => $KatS,
             'artikel1' => $artikel1,
             'category' => $category,
             'iklanA' => $iklanA,
             'postinganTerbaru' => $postinganTerbaru,
         ]);
     }
-
 }

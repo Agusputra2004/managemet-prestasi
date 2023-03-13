@@ -9,6 +9,7 @@ use App\Http\Controllers\MateriController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\IklanController;
+use App\Http\Controllers\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +31,16 @@ Route::get('/detail-artikel/{slug}', [FrontendController::class, 'detail'])->nam
 
 Auth::routes();
 
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/profil/edit', [ProfilController::class, 'editprofil'])->name('editprofil');
+
 Route::resource('kategori', KategoriController::class);
 Route::resource('artikel', ArtikelController::class);
 Route::resource('playlist', PlaylistController::class);
 Route::resource('materi', MateriController::class);
 Route::resource('slide', SlideController::class);
 Route::resource('iklan', IklanController::class);
+Route::resource('profil', ProfilController::class);
+

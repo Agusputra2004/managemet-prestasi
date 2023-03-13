@@ -1,7 +1,6 @@
 @extends('front.layouts.frontend')
 
 @section('content')
-    
 <div class="row">
     @forelse ($artikel as $row)
     <div class="col-md-4 mt-3 mb-3">

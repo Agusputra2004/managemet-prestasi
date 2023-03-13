@@ -6,7 +6,8 @@ use App\Models\Materi;
 use App\Models\Playlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage; 
+use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alerts; 
 
 class MateriController extends Controller
 {

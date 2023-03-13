@@ -39,13 +39,13 @@
             </div>
         </div>
         <div class="col-lg-4 mt-4">
-            <div class="detail-sidebar-iklan">
+            <!-- <div class="detail-sidebar-iklan">
                 <h4>{{ $iklanA->judul }}</h4>
                 <hr>
                 <a href="">
                     <img src="{{ asset('uploads/'. $iklanA->gambar_iklan)  }}"  width="350px">
                 </a>
-            </div>
+            </div> -->
 
             <div class="detail-sidebar-kategori">
                     <h4 class="mt-4">Kategori</h4>
@@ -103,6 +103,7 @@
                             height: 50px;
                             background-position: center center;
                             background-repeat: no-repeat;
+                        }
                         </style>
                         <img class="center-croppedd" src="{{ asset('uploads/'. $row->gambar_artikel) }}" class="mr-3" width="70px">
                         <div class="media-body">

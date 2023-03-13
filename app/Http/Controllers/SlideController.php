@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alerts;
 
 class SlideController extends Controller
 {

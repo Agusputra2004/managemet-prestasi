@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\Kategori;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alerts;
 
 
 
@@ -21,8 +23,14 @@ class ArtikelController extends Controller
     public function index()
     {
         $artikel = Artikel::all();
+
+        foreach ($artikel as $ar) {
+            $ar->formatted_date = Carbon::parse($ar->created_at)->format('d F Y');
+        }
+
         return view('back.artikel.index', [
-            'artikel' => $artikel 
+            'artikel' => $artikel,
+            'ar' => $ar,
         ]);
     }
 

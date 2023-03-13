@@ -1,6 +1,6 @@
 <div class="main-header">
     <!-- Logo Header -->
-    <div class="logo-header" data-background-color="blue">
+    <div class="logo-header dgreen3">
         
         <a href="index.html" class="logo">
             <!-- <img src="../assets/img/logo.svg" alt="navbar brand" class="navbar-brand"> -->
@@ -21,9 +21,49 @@
     <!-- End Logo Header -->
 
     <!-- Navbar Header -->
-    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+    <style type="text/css">
+    .dgreen3 {
+        background: #007000;
+    }
+    .dgreen2 {
+        background: #008000;
+    }
+    .dgreen {
+        background: #228B22;
+    }
+    .bg-color {
+        background-image: linear-gradient(	#32CD32, #ADFF2F);
+    }
+    </style>
+    <nav class="navbar navbar-header navbar-expand-lg dgreen2">
+        <span id="jam" style="font-size:18pt; color:white; position: absolute; top: 2; right: 0; margin-right: 20px;"></span>
+        <div class="container">
+            <?php 
+                date_default_timezone_set("Asia/jakarta");
+            ?>
+            
+                
+
+        <script type="text/javascript">
+            window.onload = function() { jam(); }
         
-        <div class="container-fluid">
+            function jam() {
+                var e = document.getElementById('jam'),
+                d = new Date(), h, m, s;
+                h = d.getHours();
+                m = set(d.getMinutes());
+                s = set(d.getSeconds());
+        
+                e.innerHTML = h +':'+ m +':'+ s;
+        
+                setTimeout('jam()', 1000);
+            }
+        
+            function set(e) {
+                e = e < 10 ? '0'+ e : e;
+                return e;
+            }
+        </script>
             <!-- <div class="text-right" id="search-nav">
                 <form class="navbar-right navbar-form nav-search mr-md-3">
                     <div class="input-group">
