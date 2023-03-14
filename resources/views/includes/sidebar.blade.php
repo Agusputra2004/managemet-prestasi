@@ -91,6 +91,7 @@
                         <p>Dokumentasi</p>
                     </a>
                 </li>
+                @can('operator')
                 <li class="nav-item">
                     <a href="{{ route('slide.index') }}">
                         <i class="fas fa-play"></i>
@@ -103,6 +104,7 @@
                         <p>Laporan </p>
                     </a>
                 </li>
+                @endcan
                 <!-- <li class="nav-item">
                     <a href="{{ route('iklan.index') }}">
                         <i class="fas fa-play"></i>

@@ -12,7 +12,12 @@
 	<div class="page-inner py-5">
 		<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 			<div>
+				@can('operator')
+				<h2 class="text-white pb-2 fw-bold">Halaman Operator</h2>
+				@endcan
+				@can('admin')
 				<h2 class="text-white pb-2 fw-bold">Halaman Admin</h2>
+				@endcan
 				<h5 class="text-white op-7 mb-2">Tetap semangat , meski di hantam banyak masalah berat</h5>
 			</div>
 			<div class="ml-md-auto py-2 py-md-0">

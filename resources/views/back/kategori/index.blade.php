@@ -34,7 +34,9 @@
 				<div class="card-header">
 					<div class="card-head-row">
 						<div class="card-title">Kategori</div>
+                        @can('operator')
                         <a href="{{ route('kategori.create') }}" class="btn btn-success btn-sm ml-auto" style="text-decoration:none; color:white;" > <i class="fa-solid fa-plus mr-1"></i>Tambah Kategori</a>
+                        @endcan
 					</div>
 				</div>
 				<div class="card-body">
@@ -50,7 +52,9 @@
                                     <th>id</th>
                                     <th>Nama Kategori</th>
                                     <th>Slug</th>
+                                    @can('operator')
                                     <th>Action</th>
+                                    @endcan
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,7 +63,9 @@
                                     <td>{{ $row -> id }}</td>
                                     <td>{{ $row -> nama_kategori }}</td>
                                     <td>{{ $row -> slug }}</td>
+                                    @can('operator')
                                     <td>
+                                            
                                         <a href="{{ route('kategori.edit', $row->id) }}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pencil"></i></a>
                                         <form action="{{ route('kategori.destroy', $row->id) }}" method="post" class="d-inline">
                                             @csrf
@@ -69,6 +75,7 @@
                                             </button>
                                         </form>
                                     </td>
+                                    @endcan
                                 </tr>
                                 @empty
                                 <tr>

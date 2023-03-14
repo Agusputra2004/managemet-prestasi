@@ -28,7 +28,9 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
- 
+ <!-- @can('admin')
+    gfkjgfhgsjfhdgjhsdf
+ @endcan -->
 	<div class="container"> 
 		<a href="/laporanpdf/cetak_pdf" class="btn btn-success mt-5 mb-3" target="_blank" style="text-decoration: none; color:white;">CETAK PDF</a>
 		<table class='table'>

@@ -24,7 +24,7 @@ class PdfController extends Controller
         $nak = Artikel::where('kategori_id', '2')->count();
         $date = Carbon::now()->format('d-m-Y');
 
-    	$pdf = PDF::loadView('laporanpdf', compact('artikel','ak','nak','date'));
+    	// $pdf = PDF::loadView('laporanpdf', compact('artikel','ak','nak','date'));
     	return view('laporanpdf', compact('artikel','ak','nak','date'));
     }
 }

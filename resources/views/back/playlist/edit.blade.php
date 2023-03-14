@@ -54,9 +54,11 @@
             <div class="form-group">
                 <label for="Status">Status</label>
                 <select name="is_active" class="form-control">
+                    @can('operator')
                     <option value="1" {{ $playlist->is_active == '1' ? 'selected' : ''}}>
                         publis
                     </option>
+                    @endcan
                     <option value="0" {{ $playlist->is_active == '0' ? 'selected' : ''}}>
                         draft
                     </option>

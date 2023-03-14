@@ -72,7 +72,9 @@
                         <div class="form-group">
                             <label for="Status">Status</label>
                             <select name="is_active" class="form-control">
+                            @can('operator')
                             <option value="1">publis</option>
+                            @endcan
                             <option value="0">draft</option>
                             </select>
                         </div>
