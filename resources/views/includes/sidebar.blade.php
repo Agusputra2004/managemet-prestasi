@@ -105,6 +105,13 @@
                 </li> --}}
 
                 <li class="nav-item">
+                    <a href="{{ route('pdf.index') }}">
+                        <i class="fa-solid fa-print"></i>
+                        <p>Laporan </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
