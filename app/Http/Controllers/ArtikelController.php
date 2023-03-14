@@ -24,13 +24,8 @@ class ArtikelController extends Controller
     {
         $artikel = Artikel::all();
 
-        foreach ($artikel as $ar) {
-            $ar->formatted_date = Carbon::parse($ar->created_at)->format('d F Y');
-        }
-
         return view('back.artikel.index', [
             'artikel' => $artikel,
-            'ar' => $ar,
         ]);
     }
 

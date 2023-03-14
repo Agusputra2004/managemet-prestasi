@@ -97,6 +97,12 @@
                         <p>Banner</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('pdf.index') }}">
+                        <i class="fas fa-print"></i>
+                        <p>Laporan </p>
+                    </a>
+                </li>
                 <!-- <li class="nav-item">
                     <a href="{{ route('iklan.index') }}">
                         <i class="fas fa-play"></i>

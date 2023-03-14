@@ -33,11 +33,11 @@
 				<div class="card-header">
 					<div class="card-head-row">
 						<div class="card-title">Data Prestasi</div>
-                        @foreach ($artikel as $ar)
+                        <!-- @foreach ($artikel as $ar)
                             <div>
                             <h1>{{ $ar->formatted_date }}</h1>
                             </div>
-                        @endforeach
+                        @endforeach -->
                         <a href="{{ route('artikel.create') }}" class="btn btn-success btn-sm ml-auto" style="text-decoration: none; color:white;"> <i class="fa-solid fa-plus mr-1"></i>Tambah Prestasi</a>
 					</div>
 				</div>
