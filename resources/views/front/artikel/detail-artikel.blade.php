@@ -32,6 +32,7 @@
                             text-justify: inter-word;
                         }
                     </style>
+                    
                     <p>
                         {!! $artikel->body !!}
                     </p>

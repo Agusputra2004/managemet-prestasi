@@ -8,10 +8,11 @@
            <img class="center-cropped" src="{{ asset('uploads/' . $row->gambar_artikel) }}" class="card-img-top" alt="...">
            <div class="card-body ">
              <h5 class="card-title">
-               <a href="{{ route('detail-artikel', $row->slug) }}" style="text-decoration: none;">
+               <a href="{{ route('detail-artikel', $row->slug) }}" style="text-decoration: none; color:black;">
                {{ $row->judul }}
                </a>
               </h5>
+              <hr>
               <style type="text/css">
               .center-cropped {
                 object-fit: cover;

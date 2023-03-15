@@ -47,7 +47,7 @@
 
                         <div class="form-group">
                             <label for="Detail">Detail Prestasi</label>
-                            <textarea name="body" id="editor1" class="form-control"></textarea>
+                            <textarea name="body" class="form-control"></textarea>
                         </div>
 
                         <div class="form-group">
