@@ -7,7 +7,7 @@
 <script src="{{ asset ('back/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js')}}"></script>
 
 <!-- jQuery Scrollbar -->
-<script src="{{ asset ('back/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js')}}"></script>
+<script src="{{ asset ('back/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js')}}"></script>GGG
 
 
 <!-- Chart JS -->

@@ -20,12 +20,12 @@
                     <div class="collapse in" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#profile">
+                                <a href="/profil">
                                     <span class="link-collapse">My Profile</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#edit">
+                                <a href="/profil/edit">
                                     <span class="link-collapse">Edit Profile</span>
                                 </a>
                             </li>

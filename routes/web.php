@@ -10,6 +10,7 @@ use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SlideController;
 use App\Http\Controllers\IklanController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ use App\Http\Controllers\PdfController;
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('/laporanpdf/cetak_pdf', [PdfController::class, 'cetak_pdf']);
 Route::get('/detail-artikel/{slug}', [FrontendController::class, 'detail'])->name('detail-artikel');
+Route::get('/profil/edit', [ProfilController::class, 'editprofil'])->name('editprofil');
 
 Auth::routes();
 
@@ -39,4 +41,7 @@ Route::resource('playlist', PlaylistController::class);
 Route::resource('materi', MateriController::class);
 Route::resource('slide', SlideController::class);
 Route::resource('iklan', IklanController::class);
+Route::resource('profil', ProfilController::class);
 Route::resource('pdf', PdfController::class);
+
+
